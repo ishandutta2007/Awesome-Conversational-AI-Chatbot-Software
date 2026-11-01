@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#05070e"/>
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.25"/>
+    </pattern>
+
+    <style>
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes floatFast {
+        0%, 100% { transform: translateY(0px) translateX(0px); }
+        50% { transform: translateY(-14px) translateX(6px); }
+      }
+      @keyframes pulseOrb {
+        0%, 100% { transform: scale(1); opacity: 0.25; }
+        50% { transform: scale(1.15); opacity: 0.45; }
+      }
+      @keyframes dashAnim {
+        from { stroke-dashoffset: 200; }
+        to { stroke-dashoffset: 0; }
+      }
+      .floating-card-1 {
+        animation: floatSlow 6s ease-in-out infinite;
+      }
+      .floating-card-2 {
+        animation: floatFast 7s ease-in-out infinite 1s;
+      }
+      .pulsing-orb {
+        animation: pulseOrb 8s ease-in-out infinite alternate;
+        transform-origin: center;
+      }
+      .circuit-line {
+        stroke-dasharray: 8 6;
+        animation: dashAnim 25s linear infinite;
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .sub-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGradient)"/>
+  <rect width="1200" height="420" rx="16" fill="url(#grid)"/>
+
+  <!-- Dynamic Ambient Orbs (Background layer) -->
+  <circle class="pulsing-orb" cx="150" cy="80" r="140" fill="#6366f1" filter="url(#glow)"/>
+  <circle class="pulsing-orb" cx="1050" cy="320" r="160" fill="#ec4899" filter="url(#glow)"/>
+  <circle class="pulsing-orb" cx="980" cy="90" r="110" fill="#06b6d4" filter="url(#glow)"/>
+
+  <!-- Decorative Circuit Flow Lines -->
+  <path class="circuit-line" d="M 60 360 C 250 360, 320 300, 500 340 C 680 380, 850 300, 1140 330" fill="none" stroke="#6366f1" stroke-width="1.8" stroke-opacity="0.4"/>
+  <path class="circuit-line" d="M 80 80 C 300 60, 420 120, 650 70 C 850 30, 950 110, 1120 70" fill="none" stroke="#a855f7" stroke-width="1.8" stroke-opacity="0.3"/>
+
+  <!-- Dynamic Floating Feature Cards (Side background elements that never obscure center text) -->
+  <g class="floating-card-1">
+    <rect x="70" y="240" width="190" height="64" rx="12" fill="#1e293b" fill-opacity="0.75" stroke="#475569" stroke-width="1" stroke-opacity="0.6"/>
+    <circle cx="96" cy="272" r="14" fill="#3b82f6" fill-opacity="0.3"/>
+    <text x="96" y="277" fill="#60a5fa" font-size="14" text-anchor="middle" font-family="sans-serif">🤖</text>
+    <text x="122" y="267" fill="#f8fafc" font-size="13" font-weight="600" font-family="sans-serif">RAG &amp; LLM</text>
+    <text x="122" y="284" fill="#94a3b8" font-size="11" font-family="sans-serif">Autonomous Agents</text>
+  </g>
+
+  <g class="floating-card-2">
+    <rect x="940" y="220" width="195" height="64" rx="12" fill="#1e293b" fill-opacity="0.75" stroke="#475569" stroke-width="1" stroke-opacity="0.6"/>
+    <circle cx="968" cy="252" r="14" fill="#10b981" fill-opacity="0.3"/>
+    <text x="968" y="257" fill="#34d399" font-size="14" text-anchor="middle" font-family="sans-serif">⚡</text>
+    <text x="994" y="247" fill="#f8fafc" font-size="13" font-weight="600" font-family="sans-serif">Human Handoff</text>
+    <text x="994" y="264" fill="#94a3b8" font-size="11" font-family="sans-serif">Live Chat Support</text>
+  </g>
+
+  <!-- Central Foreground Content (Title, Subtitle, Badges) -->
+  <g transform="translate(600, 100)">
+    <!-- Category Pill Badge -->
+    <rect x="-140" y="-30" width="280" height="34" rx="17" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+    <text x="0" y="-8" fill="#a5b4fc" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1.2" class="sub-text">✨ CURATED DIRECTORY ✨</text>
+
+    <!-- Main Title -->
+    <text x="0" y="55" fill="url(#primaryGrad)" font-size="44" text-anchor="middle" class="title-text">Conversational AI &amp; Chatbot Software</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="105" fill="#e2e8f0" font-size="19" text-anchor="middle" class="sub-text">Top Open-Source Frameworks &amp; Enterprise SaaS Customer Support Platforms</text>
+
+    <!-- Key Concept Feature Pills -->
+    <g transform="translate(0, 150)">
+      <!-- Pill 1 -->
+      <g transform="translate(-315, 0)">
+        <rect x="0" y="0" width="140" height="36" rx="18" fill="#1e293b" fill-opacity="0.9" stroke="#6366f1" stroke-width="1"/>
+        <text x="70" y="23" fill="#cbd5e1" font-size="13" font-weight="600" text-anchor="middle" class="sub-text">💬 Visual Builders</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(-155, 0)">
+        <rect x="0" y="0" width="140" height="36" rx="18" fill="#1e293b" fill-opacity="0.9" stroke="#a855f7" stroke-width="1"/>
+        <text x="70" y="23" fill="#cbd5e1" font-size="13" font-weight="600" text-anchor="middle" class="sub-text">🚀 Support Inbox</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(15, 0)">
+        <rect x="0" y="0" width="140" height="36" rx="18" fill="#1e293b" fill-opacity="0.9" stroke="#ec4899" stroke-width="1"/>
+        <text x="70" y="23" fill="#cbd5e1" font-size="13" font-weight="600" text-anchor="middle" class="sub-text">🧠 RAG &amp; NLU</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(175, 0)">
+        <rect x="0" y="0" width="140" height="36" rx="18" fill="#1e293b" fill-opacity="0.9" stroke="#06b6d4" stroke-width="1"/>
+        <text x="70" y="23" fill="#cbd5e1" font-size="13" font-weight="600" text-anchor="middle" class="sub-text">🔒 Self-Hosted</text>
+      </g>
+    </g>
+  </g>
+</svg>
