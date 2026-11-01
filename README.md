@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4ttF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome List" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Conversational-AI-Chatbot-Software/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Conversational-AI-Chatbot-Software?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Conversational-AI-Chatbot-Software/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Conversational-AI-Chatbot-Software?style=social" alt="GitHub_Stars" /></a>
   <a href="#how-to-contribute"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0-1.0" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -79,9 +79,9 @@ The following SaaS platforms are ranked in descending order by estimated company
 
 ## 🔓 Open-Source Chatbot & Support Projects
 
-The following open-source repositories are sorted in descending order by **GitHub Star Count** 🌟. Beside each name is a badge showing live star numbers and linking directly to that project's stargazers:
+The following open-source repositories are sorted in descending order by **GitHub Stars_Count** 🌟. Beside each name is a badge showing live star numbers and linking directly to that project's stargazers:
 
-| Repository 📦 | GitHub Stars 🌟 | License 📄 | Tech Stack 💻 | Architecture & Deployment 🚀 | Best For 💡 |
+| Repository 📦 | GitHub_Stars 🌟 | License 📄 | Tech Stack 💻 | Architecture & Deployment 🚀 | Best For 💡 |
 |:---|:---:|:---|:---|:---|:---|
 | **[Dify](https://github.com/langgenius/dify)** | [![Stars](https://img.shields.io/github/stars/langgenius/dify?style=social&color=white)](https://github.com/langgenius/dify/stargazers) | Apache-2.0 | Python, Next.js, Celery, PostgreSQL | Self-hosted (Docker, Kubernetes) or Dify Cloud | Production-grade LLM app studio, visual RAG agent orchestrator, and multi-model conversational workflows. |
 | **[Open WebUI](https://github.com/open-webui/open-webui)** | [![Stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social&color=white)](https://github.com/open-webui/open-webui/stargazers) | Open WebUI | Python, Svelte, Ollama / OpenAI API | Self-hosted (Docker Compose, Kubernetes) | Extensible self-hosted conversational AI interface with offline Ollama inference, RAG, and web browsing. |
@@ -148,7 +148,7 @@ Contributions from the community are warmly welcomed! Please review these steps:
 1. 🍴 Fork this repository.
 2. 📝 Follow the established tabular format:
    - For **SaaS platforms**, ensure exact company scale metrics, starting tier prices, and explicit free tier / trial terms are provided.
-   - For **Open-Source projects**, provide the repo link, valid star badge, license, stack, deployment model, and primary focus.
+   - For **Open-Source projects**, provide the repo link, valid Stars_Badge, license, stack, deployment model, and primary focus.
 3. 🚀 Submit a Pull Request with a clear description of your addition.
 
 ---
